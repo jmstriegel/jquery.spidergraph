@@ -16,13 +16,13 @@ How do I use it?
 
 First make a div to contain your graph:
 
-<style>
-#spidergraphcontainer {
-    width: 600px;
-    height: 600px;
-}
-</style>
-<div id="spidergraphcontainer"></div>
+    <style>
+        #spidergraphcontainer {
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+    <div id="spidergraphcontainer"></div>
 
 
 Apply the spidergraph and tell it what the data fields are. The spidergraph and labels will be drawn to fill the specified div.
