@@ -69,5 +69,11 @@ Reset all of the data layers in the spidergraph.
 
 
 
+Can I see an example?
+-----------------------
+
+Yes you can. Right over here:
+http://jmstriegel.github.com/jquery.spidergraph/
+
 
 
