@@ -440,7 +440,7 @@
                 exit.x + cx, exit.y + cy,
                 approach.x + cx, approach.y + cy,
                 ncoords.x + cx, ncoords.y + cy,
-                layerdata.strokecolor
+                layerdata.linear ? true : false
             );
             //drawDot( contextfg, exit.x + cx, exit.y + cy, "#000000" );
             //drawDot( contextfg, approach.x + cx, approach.y + cy, "#000000" );
@@ -512,8 +512,13 @@
         context.bezierCurveTo( Math.floor(cx1), Math.floor(cy1), Math.floor(cx2), Math.floor(cy2), Math.floor(x2), Math.floor(y2) );
         context.stroke();
     }
-    function drawBezierShapePart( context, x1, y1, cx1, cy1, cx2, cy2, x2, y2 ) {
-        context.bezierCurveTo( Math.floor(cx1), Math.floor(cy1), Math.floor(cx2), Math.floor(cy2), Math.floor(x2), Math.floor(y2) );
+    function drawBezierShapePart( context, x1, y1, cx1, cy1, cx2, cy2, x2, y2, linear ) {
+        if (!linear){
+            context.bezierCurveTo( Math.floor(cx1), Math.floor(cy1), Math.floor(cx2), Math.floor(cy2), Math.floor(x2), Math.floor(y2) );
+        }
+        else {
+            context.lineTo(Math.floor(x2), Math.floor(y2));
+        }
     }
 
 
