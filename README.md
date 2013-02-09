@@ -68,6 +68,16 @@ Reset all of the data layers in the spidergraph.
     $('#spidergraphcontainer').spidergraph('resetdata');
 
 
+If you wish to use a linear style layer (no curves), simply add attribute 'linear' with value true.
+
+    $('#spidergraphcontainer').spidergraph('addlayer', { 
+        'strokecolor': 'rgba(230,204,230,0.8)',
+        'fillcolor': 'rgba(230,204,230,0.6)',
+        'data': [5, 4, 9, 8, 1],
+        'linear': true
+    });
+
+
 
 Can I see an example?
 -----------------------
